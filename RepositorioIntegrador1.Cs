@@ -17,4 +17,33 @@ namespace PruebaAppLoginIniciodesesión_Rutas_Nicas
         {
             InitializeComponent();
         }
+
         
+        private void btnIniciarsesión_Click(object sender, EventArgs e)
+        {
+             if (txtEmail.Text == "ggabriel22@gmail.com" && txtContraseña.Text == "1234")
+             {
+                new Form2().Show();
+                this.Hide();
+
+             }
+             else
+
+             {
+                MessageBox.Show("El nombre de usuario o contraseña que ingresaste es incorrecto,intenta otravez");
+                txtEmail.Clear();
+                txtContraseña.Clear();
+                txtEmail.Focus();
+             }
+
+        }
+
+        private void lblCreaunaahora_Click(object sender, EventArgs e)
+        {
+            new Form3().Show();
+            this.Hide();
+        }
+
+    }
+
+}
